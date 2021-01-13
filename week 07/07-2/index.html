@@ -1,0 +1,54 @@
+<!doctype html>
+<header>
+	<title>Age Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script.js"></script>
+</header>
+<main>
+	<div>
+    <div>
+		<div>
+		<h3>Your Age on Mars</h3>
+          <ul class="list">
+            <li>Enter your birth date in the space provided below.</li>
+            <li>Click the Calculate Button and the results will apear within the Mars boxes.</li>
+          </ul>
+        </p>
+        <FORM method=POST>
+			<div class="table">		 
+			<TABLE>
+				<TR>
+					<td>Birth date</td>
+				</TR>
+				
+				<TR>
+					<td>MM</td>
+				<td>DD</td>
+				<td>YYYY</td>
+			</TR>
+			<TR>
+	  			<td><INPUT type=text Name=month size=5 ></td>
+	  			<td><INPUT type=text Name=day size=5 ></td>
+				<td><INPUT type=text Name=year size=5 ></td>
+				
+			</TR>
+			</TABLE>
+
+			</div>
+        
+			<div class="button">
+         
+			<INPUT type="button" value="Calculate" onClick="compute_age(this.form)">
+         
+			</div>
+         
+			<div class="output">
+				<p>MARS</p>
+				Your&nbsp;age&nbsp;is<br>
+			<INPUT type=text Name=marsday size=7>&nbsp;Martian&nbsp;days
+			<br>
+			<INPUT type=text Name=marsyear size=7>&nbsp;Martian&nbsp;years
+			</div>
+        </form>
+</main>
+</html>

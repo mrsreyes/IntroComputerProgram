@@ -1,0 +1,57 @@
+<!-- Makayla Steinmetz CITPT 106 2/03/2019 
+	Program prompts user to enter a temperature in Fahrenheit,
+	Converts this to Celsius and displays on the HTML page.
+	Second Prompt asks for temperature in Celsius.
+	Converts the temperature to Fahrenheitand prints it to the 
+	browser's JavaScript console.
+--><!DOCTYPE html>
+<html>
+<header>
+	<title>Temperature Converter</title>
+</header>
+<body>
+	<h1>Temperature Converter</h1>
+	<h3>Enter in the corresponding temperatures in the boxes below to convert them from either Fahrenheit to Celsius or Celsius to Fahrenheit.</h3>
+<input type="text" size="50" id="fehren" value="Please enter a temperature in Fahrenheit" onfocus="this.value='';"/>
+<input type="text" size="50" id="cels" value="Please enter a temperature in Celsius" onfocus="this.value='';"/>
+  
+<br><br>
+  
+<button class="button buttonF" onclick="fehrenToC()">Convert Fahrenheit</button>
+<button class="button buttonC"onclick="cToFehren()">Convert Celsius</button>
+
+<style>
+	.button {
+  background-color: #eef442; /* Yellow */
+  box-shadow: 5px 3px;
+  padding: 10px 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+	body {
+font-family: "Comic Sans MS", cursive, sans-serifs;
+}
+</style>
+
+<script>
+
+	function fehrenToC(){
+		var enterF = document.getElementById("fehren").value;
+		var y = enterF.replace("F","")
+		var calF = parseInt((y-32)*5/9);
+		document.getElementById("cels").value = calF +" C";
+	}
+	function cToFehren(){
+		var enterC = document.getElementById("cels").value;
+		var x = enterC.replace("C","")
+		var calC = parseInt(x*9/5+32);
+		document.getElementById("fehren").value = calC +" F";
+	}
+</script>
+
+</body>
+	<footer>
+		<p>Created by: Makayla Steinmetz</p>
+	</footer>
+</html>

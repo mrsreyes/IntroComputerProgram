@@ -1,0 +1,72 @@
+<!-- Makayla Steinmetz CITPT 106 2/03/2019 
+Create a web application with two prompts: one for the user's height in inches,
+and another for the user's weight in pounds. Use this information to calculate 
+the user's Body Mass Index.
+Then tell the user what this BMI is and how healthy the user is.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Body Mass Converter</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+	<style>
+		body {
+		background-color: tan;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}
+		#weight {
+		text-align: center;
+	}
+		#height {
+		text-align: center;
+	}
+		.button{
+		background-color: silver;
+		padding: 10px 25px;
+		text-align: center;
+		font-size: 20px;
+		margin: 4px 6px;
+	}
+	</style>
+	<script>
+	function bmiCalc () {
+var height = Number(document.getElementById("height").value);
+var weight = Number(document.getElementById("weight").value);
+var result = ((weight * 703)/ height)/height ;
+document.getElementById("result").innerHTML = "Your bmi score is : " + result.toFixed(2);
+
+	var status;
+	if(result<=18.5){
+		status='Underweight';
+	}
+	else if(result<=24.9){
+		status='Normal';
+	}
+	else if(result<=29.9){
+		status='Overweight';
+	}
+	else{
+		status='Obese';
+	}
+alert(status);
+}
+	</script>
+    <body>
+        <form>
+            <h4>BMI(Body Mass Index) Converter</h4>
+            <input id="weight" type="text" placeholder="Your weight in pounds" />
+            <br />
+            <br />
+            <input id="height" type="text" placeholder="Your height in inches" />
+            <br />
+            <br />
+            
+            <input class = "button" type="button"  value="Calculate" onclick="bmiCalc()" />
+            <p id="result">Here will be your result</p>
+        </form>
+</body>
+	<footer>
+		<p>Created by: Makayla Steinmetz</p>
+	</footer>
+</html>

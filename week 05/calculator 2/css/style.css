@@ -1,0 +1,15 @@
+input{
+	width: 10.5%;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	text-align: center;
+}
+input[type=text]:focus {
+  background-color: yellow;
+}
+input[type=button]{
+	background-color: orange;
+	color: white;
+	margin: 4px 2px;
+	cursor: pointer;
+}

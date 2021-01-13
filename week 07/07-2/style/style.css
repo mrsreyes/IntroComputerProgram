@@ -1,0 +1,24 @@
+h3{
+	text-align: center;
+}
+.list{
+	padding-left: 550px;
+}
+td{
+	text-align: center;
+}
+.table{
+	padding-left: 550px;
+}
+.button{
+	width:170px;
+	float:left;
+	text-align:center;
+	padding-top:35px;
+	padding-left: 550px;
+}
+.output{
+	width:170px;
+	float:left;
+	text-align:center;
+}
